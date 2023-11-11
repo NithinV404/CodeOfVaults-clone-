@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&family=Open+Sans&display=swap');
+:root
+{
+    --primary-border-color: rgb(224, 224, 224);
+    --font-family: 'Noto Sans', sans-serif;
+    --font-color: rgb(36, 36, 36);
+    --primary-btn-bg: linear-gradient(60deg, rgba(246,91,91,1) 0%, rgba(250,139,140,1) 100%);
+    --primary-btn-bg-hover: linear-gradient(0deg, rgba(246,91,91,1) 0%, rgba(250,139,140,1) 100%);
+}
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family);
+    color: var(--font-color);
+}
+.navbar
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--primary-border-color)
+}
+.navbar-menu
+{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 20rem;
+    margin-left: 5rem;
+}
+.navbar-items
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 20rem;
+}
+.navbar-items > img
+{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.internships-main
+{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+.internship-header> h1
+{
+    display: inline-block;
+    font-weight: 400;
+    margin: 2rem 5rem;
+}
+.internships-container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 5rem;
+    gap: 1rem;
+}
+
+.internship
+{
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+    height: 15rem;
+    padding: 2rem 1rem;
+    border: 1px solid var(--primary-border-color);
+    flex-shrink: 0;
+    border-radius: 10px;
+    transition: ease-in-out 0.2s;
+}
+.internship:hover
+{
+    cursor: pointer;
+    box-shadow: 0px 5px 20px var(--primary-border-color);
+}
+
+.internship-details
+{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    gap: 0.5em;
+    margin: 1rem 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    .internships-container
+    {
+       flex-direction: column;
+       align-items: center;
+    }
+  }
+.active-nav
+{
+    box-shadow: 0px 2px 0px black;
+}
+.p-btn
+{
+    border-radius: 10px;
+    border: none;
+    background: var(--primary-btn-bg);
+    padding: 0.5rem;
+    color: var(--font-color);
+    transition: ease-in-out 0.5s;
+}
+.p-btn:hover
+{
+    cursor: pointer;
+    box-shadow: 0px 5px 20px var(--primary-border-color);
+    background: var(--primary-btn-bg-hover);
+}
